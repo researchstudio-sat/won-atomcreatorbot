@@ -23,7 +23,7 @@
     <import resource="classpath:spring/component/botContext/botContext.xml"/>
     <import resource="classpath:/spring/component/atomproducer/atomproducer-mixed.xml"/>
 
-    <bean id="atomCreatorBot" class="won.bot.impl.AtomCreatorBot">
+    <bean id="atomCreatorBot" class="won.bot.atomcreator.impl.AtomCreatorBot">
         <property name="taskScheduler" ref="taskScheduler"/>
         <property name="botContextWrapper" ref="botContextWrapper"/>
         <!--<property name="atomProducer" ref="atomProducerFromMails" />-->
