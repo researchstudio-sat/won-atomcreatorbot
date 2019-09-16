@@ -4,10 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.stereotype.Component;
 
 import javax.crypto.Cipher;
 import java.lang.invoke.MethodHandles;
 
+@Component
 public class AtomCreatorBotApp implements CommandLineRunner {
     private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
     public static void main(String[] args) throws Exception {
