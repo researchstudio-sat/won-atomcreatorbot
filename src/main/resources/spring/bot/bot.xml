@@ -18,18 +18,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <import resource="classpath:spring/component/nodeurisource/nodeurisource-random.xml"/>
-    <import resource="classpath:spring/component/botContext/botContext.xml"/>
     <import resource="classpath:/spring/component/atomproducer/atomproducer-mixed.xml"/>
 
     <bean id="atomCreatorBot" class="won.bot.atomcreator.impl.AtomCreatorBot">
         <property name="taskScheduler" ref="taskScheduler"/>
         <property name="botContextWrapper" ref="botContextWrapper"/>
-        <!--<property name="atomProducer" ref="atomProducerFromMails" />-->
-        <!--<property name="atomProducer" ref="atomProducerFromTrig" />-->
         <property name="atomProducer" ref="atomProducerMixed"/>
-        <property name="nodeURISource" ref="nodeUriSourceRandom"/>
+        <!-- property name="nodeURISource" ref="nodeUriSourceRandom"/ -->
         <!-- expects a bean named "ownerProtocolAtomServiceClient" in the context -->
         <property name="wonMessageSender" ref="ownerProtocolAtomServiceClientJMSBased"/>
         <property name="trigger">
